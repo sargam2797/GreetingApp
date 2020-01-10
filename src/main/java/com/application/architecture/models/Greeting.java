@@ -1,34 +1,20 @@
 package com.application.architecture.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Greeting {
     @Id
-    @GeneratedValue
-    private long counter;
+    private long greetingId;
     private String message;
 
     public Greeting() {
     }
 
-    public Greeting(long counter, String message) {
-        this.counter = counter;
+    public Greeting(long greetingId, String message) {
+        this.greetingId = greetingId;
         this.message = message;
-    }
-
-    public long getCounter() {
-        return counter;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setCounter(long counter) {
-        this.counter = counter;
     }
 
     public void setMessage(String message) {
@@ -37,7 +23,7 @@ public class Greeting {
 
     @Override
     public String toString() {
-        return "counter=" + counter +
+        return "greetingId=" + greetingId +
                 ",message=" + message;
     }
 }

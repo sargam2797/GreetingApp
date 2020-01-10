@@ -12,6 +12,7 @@ import java.util.List;
 public class GreetingController {
     @Autowired
     private IGreetingService greetingService;
+
     @Autowired
     private MyUser myUser;
 
